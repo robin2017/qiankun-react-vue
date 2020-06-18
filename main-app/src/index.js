@@ -6,13 +6,7 @@ window.reactClick = function () {
     console.log('点击按钮react')
     loadMicroApp({
         name: 'reactApp', // app name registered
-        entry: {
-            scripts: [
-                'react-static/js/bundle.js',
-                'react-static/js/0.chunk.js',
-                'react-static/js/main.chunk.js'
-            ]
-        },
+        entry: '//localhost:10081',
         container: '#qiankun-content',
     })
 }

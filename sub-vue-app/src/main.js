@@ -13,7 +13,7 @@ if (document.querySelector('#app')) {
 }
 
 export async function bootstrap() {
-    console.log('react app bootstraped');
+    console.log('vue app bootstraped');
 }
 
 export async function mount(props) {

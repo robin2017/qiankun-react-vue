@@ -15,11 +15,11 @@ export async function bootstrap() {
 
 export async function mount(props) {
     console.log(props);
-    ReactDOM.render(<App/>, document.querySelector('#root'));
+    ReactDOM.render(<App/>, document.querySelector('#qiankun-content'));
 }
 
 export async function unmount() {
-    ReactDOM.unmountComponentAtNode(document.querySelector('#root'));
+    ReactDOM.unmountComponentAtNode(document.querySelector('#qiankun-content'));
 }
 
 export async function update(props) {

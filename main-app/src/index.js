@@ -1,50 +1,31 @@
-import {loadMicroApp} from 'qiankun';
-//
-// registerMicroApps([
-//     {
-//         name: 'react app', // app name registered
-//         entry: {
-//             scripts: [
-//                 '//localhost:10081/static/js/bundle.js',
-//                 '//localhost:10081/static/js/0.chunk.js',
-//                 '//localhost:10081/static/js/main.chunk.js'
-//             ]
-//         },
-//         container: '#sub-react',
-//         activeRule: '/sub_react',
-//     }
-// ]);
-// start();
+import {
+    loadMicroApp
+} from 'qiankun';
 
-function reactClick() {
+window.reactClick = function () {
     console.log('点击按钮react')
     loadMicroApp({
-        name: 'react app', // app name registered
+        name: 'reactApp', // app name registered
         entry: {
             scripts: [
-                '//localhost:10081/static/js/bundle.js',
-                '//localhost:10081/static/js/0.chunk.js',
-                '//localhost:10081/static/js/main.chunk.js'
+                'react-static/js/bundle.js',
+                'react-static/js/0.chunk.js',
+                'react-static/js/main.chunk.js'
             ]
         },
         container: '#qiankun-content',
     })
 }
-
-window.reactClick = reactClick
-
-function vueClick() {
+window.vueClick = function () {
     console.log('点击按钮vue')
     loadMicroApp({
-        name: 'vue app', // app name registered
+        name: 'vueApp', // app name registered
         entry: {
             scripts: [
-                '//localhost:10082/js/chunk-vendors.c9f25e13.js',
-                '//localhost:10082/js/app.0b1df353.js'
+                'vue-static/js/chunk-vendors.js',
+                'vue-static/js/app.js'
             ]
         },
         container: '#qiankun-content',
     })
 }
-
-window.vueClick = vueClick

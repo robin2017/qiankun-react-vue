@@ -160,6 +160,7 @@ module.exports = function(webpackEnv) {
     ].filter(Boolean),
     output: {
       library:'qiankunReact',
+      libraryTarget:'umd',
       // The build folder.
       path: isEnvProduction ? paths.appBuild : undefined,
       // Add /* filename */ comments to generated require()s in the output.

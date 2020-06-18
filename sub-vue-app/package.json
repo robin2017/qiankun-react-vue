@@ -3,9 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve --port 10082",
-    "build": "vue-cli-service build",
-    "http-serve": "cd dist && hs --cors -p 10082"
+    "serve": "vue-cli-service serve --port 10082"
   },
   "dependencies": {
     "core-js": "^3.6.5",

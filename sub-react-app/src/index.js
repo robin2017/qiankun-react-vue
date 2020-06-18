@@ -1,4 +1,28 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import App from './App'
-ReactDOM.render(<App/>, document.querySelector('#root'))
+
+if(document.querySelector('#root')){
+    console.log('独立模式')
+    ReactDOM.render(<App/>, document.querySelector('#root'))
+}else{
+    console.log('集成模式')
+}
+
+export async function bootstrap() {
+    console.log('react app bootstraped');
+}
+
+export async function mount(props) {
+    console.log(props);
+    ReactDOM.render(<App/>, document.querySelector('#root'));
+}
+
+export async function unmount() {
+    ReactDOM.unmountComponentAtNode(document.querySelector('#root'));
+}
+
+export async function update(props) {
+    console.log('update props', props);
+}
+
